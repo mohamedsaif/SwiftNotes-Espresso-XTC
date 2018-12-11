@@ -33,4 +33,9 @@ dependencies {
     }
 
     androidTestCompile 'com.xamarin.testcloud:espresso-support:1.3'
+    
+    def appCenterSdkVersion = '1.10.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+    
 }
