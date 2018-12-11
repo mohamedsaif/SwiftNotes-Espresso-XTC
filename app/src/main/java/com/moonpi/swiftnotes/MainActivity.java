@@ -32,6 +32,10 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.ArrayList;
 
+import com.microsoft.appcenter.AppCenter; 
+import com.microsoft.appcenter.analytics.Analytics; 
+import com.microsoft.appcenter.crashes.Crashes;
+
 import static com.moonpi.swiftnotes.DataUtils.*;
 
 
@@ -69,6 +73,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+            //App Center
+            AppCenter.start(getApplication(), "99270b99-729a-4d60-9067-8efe25ebcf80", Analytics.class, Crashes.class);
+            
         // Initialize local file path and backup file path
         localPath = new File(getFilesDir() + "/" + NOTES_FILE_NAME);
 
